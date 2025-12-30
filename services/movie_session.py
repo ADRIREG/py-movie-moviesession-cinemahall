@@ -1,5 +1,5 @@
 from django.db.models import QuerySet
-from typing import List, Optional
+from typing import Optional
 from datetime import datetime
 from db.models import MovieSession, Movie, CinemaHall
 
@@ -14,7 +14,7 @@ def create_movie_session(
 
     movie_session = MovieSession.objects.create(
         show_time=movie_show_time,
-        movie=movie,
+        movie_id=movie_id,
         cinema_hall=cinema_hall
     )
     return movie_session

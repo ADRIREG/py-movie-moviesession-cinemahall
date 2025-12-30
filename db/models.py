@@ -28,8 +28,8 @@ class Movie(models.Model):
 
 class CinemaHall(models.Model):
     name = models.CharField(max_length=255)
-    rows: int = models.IntegerField()
-    seats_in_row: int = models.IntegerField()
+    rows = models.IntegerField()
+    seats_in_row = models.IntegerField()
 
     def __str__(self) -> str:
         return f"{self.name}"
