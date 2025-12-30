@@ -1,6 +1,6 @@
 from typing import List, Optional
 from django.db.models import QuerySet
-from db.models import Movie, Genre, Actor
+from db.models import Movie
 
 
 def get_movies(
@@ -46,4 +46,3 @@ def create_movie(
         movie.actors.set(actors_ids)
 
     return movie
-
